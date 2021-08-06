@@ -24,7 +24,12 @@ const BG = {
 }
 
 
-
+function reglas() {
+    alertify.alert(("1. PRESIONA y SUELTA la BARRA ESPACIADORA para hacer volar al pájaro y superar obstáculos. <br>2. Cada Obstáculo superado te dará un punto. <br>3. Supera cuantos puedas")
+     , function () {
+        });
+        
+}
 
 function handleBackground(){
     if (BG.x1 <= -BG.width + gamespeed) BG.x1 = BG.width;

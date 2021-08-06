@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlappyTCU</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alertify.css">
 </head>
 <body>
     <section class="container">
@@ -13,7 +14,7 @@
         <h1>Juego de Obstáculos</h1>
         <div class="boton-container">
         <button id="reiniciar" onclick="window.location.reload()">Reiniciar</button>
-        <button id="instrucciones" onclick="window.location.reload()">Instrucciones</button> 
+        <button id="instrucciones" onclick="reglas()">Instrucciones</button> 
         </div>
 
     </div>
@@ -21,6 +22,8 @@
     <canvas id="canvas1"></canvas> 
     </section>
     
+    <script src="js/alertify.js"></script>
+    <script src="js/alertify.min.js"></script>
     <script src="js/bird.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/obstacles.js"></script>
