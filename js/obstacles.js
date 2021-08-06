@@ -22,11 +22,12 @@ class Obstacle{
             this.counted = true
         }
         this.draw();
+        
     }
 }
 
 function handleObstacles(){
-    if(frame%50===0){
+    if(frame%70 === 0){
         obstaclesArray.unshift(new Obstacle);
     }
     for (let i = 0; i < obstaclesArray.length; i++){

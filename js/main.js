@@ -43,8 +43,10 @@ function animate(){
     handleBackground();
     handleObstacles();
     handleParticles();
+    audio.startMusic();
     bird.update();
     bird.draw();
+    
     ctx.fillStyle = "#000";
     ctx.font = '50px Poppins';
     ctx.strokeText(score, 450, 70);
@@ -60,6 +62,7 @@ animate();
 
 window.addEventListener('keydown', function(e){
     if (e.code === "Space") spacePressed = true;
+    audio.flip();
 });
 
 window.addEventListener('keyup', function(e){
@@ -77,6 +80,7 @@ function handleCollisions(){
             (bird.y > canvas.height - obstaclesArray[i].bottom &&
                 bird.y + bird.height < canvas.height))){
                     ctx.drawImage(bang, bird.x, bird.y, 50, 50);
+                    audio.gameOver();
                     ctx.font = "25px Poppins";
                     ctx.fillStyle = "white";
                     ctx.fillText('Juego Terminado,  Puntuación: ' + score, 160, canvas.height/2-10);
