@@ -37,13 +37,23 @@ body{
     overflow: hidden;
 }
 
-button{
+.boton-container{
     position: relative;
-    height: 40px;
-    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 350px;
     top: 75px;
-    right: 50%;
-    left: 47%;
+    right: 40%;
+    left: 40%;
+    
+}
+
+button{
+    
+    height: 40px;
+    width: 150px;
     padding: 10px 20px;
     border-radius: 7px;
     border: 1px solid #b662b2;
@@ -54,6 +64,8 @@ button{
     transition: 300ms ease-in-out;
     transition-property: box-shadow;
 }
+
+
 
 button:hover{
     cursor: var(--cursorJuegoBlanco);
